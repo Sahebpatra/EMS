@@ -1,0 +1,69 @@
+
+    <div class="container-fluid ">
+        <form [formGroup]="form">
+
+            <div class="row ">
+                <ng-container *ngFor="let field of formFields">
+                    <ng-container [ngSwitch]="field.type">
+                        <div [class]="field.class" *ngSwitchCase="'text'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                <input matInput [formControlName]="field.name" placeholder="Enter {{field.label}}">
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                        <div [class]="field.class" *ngSwitchCase="'number'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                <input matInput type="number" [formControlName]="field.name" placeholder="Enter {{field.label}}">
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                        <div [class]="field.class" *ngSwitchCase="'password'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                <input matInput type="password" [formControlName]="field.name" placeholder="Enter {{field.label}}">
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                        <div [class]="field.class" *ngSwitchCase="'date'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                <input matInput type="date" [formControlName]="field.name" >
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                        <div [class]="field.class" *ngSwitchCase="'select'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                    <mat-select [formControlName]="field.name">
+                                      <mat-option *ngFor="let item of field.options" [value]="item.value">{{item.key}}</mat-option>
+                                    </mat-select>
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                        <div [class]="field.class" *ngSwitchCase="'textarea'" [hidden]="field.hidden">
+                            <mat-form-field class="input" appearance="outline">
+                                <mat-label>{{field.label}}</mat-label>
+                                <textarea matInput type="text" [formControlName]="field.name" placeholder="Enter {{field.label}}"></textarea>
+                            </mat-form-field>
+                            <small *ngIf="form.controls[field.name].touched && form.hasError('required',field.name)"
+                                class="text-danger">
+                                *{{field.label}} is required</small>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </form>
+    </div>
+    

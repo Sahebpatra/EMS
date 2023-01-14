@@ -1,0 +1,19 @@
+
+<div class="card mx-auto">
+    <span class="head text-center">{{formOptions.formname}}</span>
+    <div class="container-fluid ">
+        <app-dnamic-form [formOptions]="formOptions" [AutopopulateData]="AutopopulateData" (emitFormData)="getData($event)"></app-dnamic-form>
+            <div class="row ">
+                <div class="col-sm-6 "></div>
+                <div class="col-sm-6 ">
+                    <div class="pull-right">
+                        <button type="button" (click)="onEdit()" class="btn btn-sm btn-primary">Update</button>&nbsp;&nbsp;
+                        <button type="reset" routerLink="/admin/employees" class="btn btn-sm btn-warning">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+    </div>
+
+</div>

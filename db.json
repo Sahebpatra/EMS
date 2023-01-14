@@ -1,0 +1,108 @@
+{
+  "Employees": [
+    {
+      "id": 1,
+      "name": "Saheb",
+      "department": "Developer",
+      "country": "India",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "email": "saheb@yopmail.com",
+      "mobile": "9064438328",
+      "pin": "721127",
+      "about": "My Name is SAHEB"
+    },
+    {
+      "id": 2,
+      "name": "Riddha",
+      "department": "HR",
+      "email": "riddha@gmail.com",
+      "mobile": "907394174",
+      "country": "India",
+      "state": "WB",
+      "city": "Kolkata",
+      "pin": "700051"
+    },
+    {
+      "id": 3,
+      "name": "Mamoni",
+      "department": "Accounts",
+      "email": "mamoni@gmail.com",
+      "mobile": "907394174",
+      "country": "India",
+      "state": "WB",
+      "city": "Kolkata",
+      "pin": "700051"
+    },
+    {
+      "id": 5,
+      "name": "John",
+      "department": "IT",
+      "email": "john@gmail.com",
+      "mobile": "85412548",
+      "country": "USA",
+      "state": "California",
+      "city": "zzz",
+      "pin": "123456"
+    },
+    {
+      "id": 6,
+      "name": "Emey",
+      "department": "Sales",
+      "email": "wmey@yopmail.com",
+      "mobile": "74126841",
+      "country": "India",
+      "state": "aaa",
+      "city": "sss",
+      "pin": "123456"
+    },
+    {
+      "name": "DFGDSF",
+      "department": "HR",
+      "country": "India",
+      "state": "Delhi",
+      "city": "SDFGSD",
+      "email": "SDFGSD",
+      "mobile": 32452342345,
+      "pin": 54634523452,
+      "about": "DFGSDFGSDFG",
+      "id": 7
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "username": "saheb@yopmail.com",
+      "password": "1234",
+      "role": "admin",
+      "isActive": 1
+    },
+    {
+      "username": "saheb",
+      "password": "1234",
+      "role": "admin",
+      "id": 2,
+      "isActive": 1
+    },
+    {
+      "username": "Saheb@123",
+      "password": "123",
+      "confirmpassword": "123",
+      "role": "admin",
+      "id": 3
+    },
+    {
+      "username": "riddha",
+      "password": "1234",
+      "confirmpassword": "1234",
+      "role": "admin",
+      "id": 4
+    },
+    {
+      "username": "dff",
+      "password": "213134",
+      "conpassword": "23424",
+      "id": 5
+    }
+  ]
+}

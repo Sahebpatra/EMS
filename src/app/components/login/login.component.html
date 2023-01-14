@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="bg ">
+<div class="card mx-auto">
+    <span class="head text-center">{{formOptions.formname}}</span>
+    <div class="container-fluid ">
+        
+            <app-dnamic-form [formOptions]="formOptions" (emitFormData)="getData($event)"></app-dnamic-form>
+            <div class="row mt-4">
+                <div class="col-sm-12 ">
+                    <button type="button" (click)="onLogin()" class="btn btn-sm btn-info ">Login</button>&nbsp;&nbsp;
+                   <small>Don't have an Account?<a routerLink="/signup">Click here</a></small>
+                </div>
+                <div class="col-sm-6 ">
+                </div>
+            </div>
+            <br>
+
+    </div>
+</div>
+</div>

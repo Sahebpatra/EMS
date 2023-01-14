@@ -1,0 +1,77 @@
+
+<div class="card mx-auto">
+    <span class="head text-center">Details</span>
+    <div class="container-fluid ">
+        <form [formGroup]="empForm">
+            <div class="row ">
+                <div class="col-sm-6">
+                <mat-form-field class="input" appearance="outline">
+                    <mat-label>Id</mat-label>
+                    <input matInput [readonly]="true" formControlName="id" placeholder="Enter Id">
+                  </mat-form-field>
+            </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput [readonly]="true" formControlName="name" placeholder="Enter Name">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Department</mat-label>
+                        <input matInput [readonly]="true" formControlName="department" placeholder="Enter Department">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput [readonly]="true" formControlName="email" placeholder="Enter Email">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Mobile</mat-label>
+                        <input matInput [readonly]="true" formControlName="mobile" placeholder="Enter Mobile">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Country</mat-label>
+                        <input matInput [readonly]="true" formControlName="country" placeholder="Enter Country">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>State</mat-label>
+                        <input matInput [readonly]="true" formControlName="state" placeholder="Enter State">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>City</mat-label>
+                        <input matInput [readonly]="true" formControlName="city" placeholder="Enter City">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Pin</mat-label>
+                        <input matInput [readonly]="true" formControlName="pin" placeholder="Enter Pin">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-6 "></div>
+                <div class="col-sm-6 ">
+                    <div class="pull-right">
+                       
+                        <button type="reset" routerLink="/admin/employees" class="btn btn-sm btn-warning">Back</button>
+                    </div>
+                </div>
+            </div>
+      
+            <br>
+        </form>
+    </div>
+
+</div>
+
