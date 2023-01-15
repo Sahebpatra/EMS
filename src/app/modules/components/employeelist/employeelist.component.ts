@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Services } from 'src/app/components/Auth/services.service';
 import Swal from 'sweetalert2';
 
@@ -9,8 +10,8 @@ import Swal from 'sweetalert2';
 })
 export class EmployeelistComponent implements OnInit {
   RowData:any;
-  hideColumn=['id','about'];
-  constructor(private service: Services) { }
+  hideColumn=['about'];
+  constructor(private service: Services,private router:Router) { }
 
   ngOnInit(): void {
     this.getEmployee()
@@ -26,6 +27,12 @@ export class EmployeelistComponent implements OnInit {
         }
       }
     )
+  }
+  onEdit(evt){
+      this.router.navigate([`/admin/edit/${evt.id}`])
+  }
+  onView(evt){
+     this.router.navigate([`/admin/employee/${evt.id}`])
   }
   onDelete(id: any) {
     console.log(id)

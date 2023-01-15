@@ -16,9 +16,9 @@
                 <td *ngFor="let key of dytData.headOrder;">{{item[key]}}</td>
             </ng-container>
             <td *ngIf="dytData.ActionClumn">
-                <i routerLink="" class="fa fa-edit fa-lg text-primary pointer mx-2"></i>
-                <i routerLink="" class="fa fa-eye fa-lg text-success pointer mx-2"></i>
-                <i class="fa fa-trash fa-lg text-danger pointer mx-2"></i>
+                <i (click)="onEditClick(item)" class="fa fa-edit fa-lg text-primary pointer mx-2"></i>
+                <i (click)="onViewClick(item)" class="fa fa-eye fa-lg text-success pointer mx-2"></i>
+                <i (click)="onDeleteClick(item)" class="fa fa-trash fa-lg text-danger pointer mx-2"></i>
             </td>
         </tr>
     </tbody>
