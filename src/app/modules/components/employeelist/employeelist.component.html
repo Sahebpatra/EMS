@@ -11,6 +11,8 @@
             [HideColumn]="hideColumn"
             [ActionClumn]="true"
             (clickEdit)="onEdit($event)"
+            (clickView)="onView($event)"
+            (clickDelete)="onDelete($event.id)"
             >
             </dy-table>
         </ng-container>

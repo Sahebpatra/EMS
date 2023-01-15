@@ -18,8 +18,8 @@ const routes: Routes = [
     { path: 'employees', component: EmployeelistComponent },
     { path: 'userslist', component: UsersComponent },
     { path: 'add', component: AddEmployeeComponent },
-    { path: 'edit/:id', component: EditEmployeeComponent },
-    { path: 'employee/:id', component: GetEmployeeByIdComponent}
+    { path: 'employee/edit/:id', component: EditEmployeeComponent },
+    { path: 'employee/view/:id', component: GetEmployeeByIdComponent}
   ]}
 ];
 

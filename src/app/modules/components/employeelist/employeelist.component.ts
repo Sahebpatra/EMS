@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class EmployeelistComponent implements OnInit {
   RowData:any;
-  hideColumn=['about'];
+  hideColumn=['id','about'];
   constructor(private service: Services,private router:Router) { }
 
   ngOnInit(): void {
@@ -29,10 +29,10 @@ export class EmployeelistComponent implements OnInit {
     )
   }
   onEdit(evt){
-      this.router.navigate([`/admin/edit/${evt.id}`])
+      this.router.navigate([`/admin/employee/edit/${evt.id}`])
   }
   onView(evt){
-     this.router.navigate([`/admin/employee/${evt.id}`])
+     this.router.navigate([`/admin/employee/view/${evt.id}`])
   }
   onDelete(id: any) {
     console.log(id)

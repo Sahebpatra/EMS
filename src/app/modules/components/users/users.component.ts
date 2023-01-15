@@ -7,26 +7,21 @@ import { Services } from 'src/app/components/Auth/services.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  RowData:any;
-  Active:any;
-  constructor(private service:Services) { }
+  RowData: any;
+  ColumnOrder = ["User Name", "Role", "Active"]
+  JsonKey = ["username", "role", "isActive"]
+  constructor(private service: Services) { }
 
   ngOnInit(): void {
-this.service.getUsers().subscribe(
-  {
-    next:(res)=>{
-      console.log(res);
-      this.Active=res.isActive==1? 'Yes':'No';
-    this.RowData=res;
-
-    }
+    this.service.getUsers().subscribe(
+      {
+        next: (res) => {
+          this.RowData = res;
+        }
+      }
+    )
   }
-)
-  }
-
-
-
-  onDelete(id:any){
+  onDelete(id: any) {
 
   }
 }

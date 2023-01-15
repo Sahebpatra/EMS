@@ -13,7 +13,7 @@
                 <td *ngFor="let key of tableHeaders;">{{item[key]}}</td>
             </ng-container>
             <ng-container *ngIf="dytData.CustomHeader">
-                <td *ngFor="let key of dytData.headOrder;">{{item[key]}}</td>
+                <td *ngFor="let key of dytData.JsonKeys">{{item[key]}}</td>
             </ng-container>
             <td *ngIf="dytData.ActionClumn">
                 <i (click)="onEditClick(item)" class="fa fa-edit fa-lg text-primary pointer mx-2"></i>

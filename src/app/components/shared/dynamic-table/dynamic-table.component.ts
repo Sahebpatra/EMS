@@ -11,6 +11,7 @@ export class DynamicTableComponent implements OnInit, OnChanges {
     @Input() ColumnOrder: any;
     @Input() HideColumn: any;
     @Input() ActionClumn: any;
+    @Input() JsonKeys: any;
     @Output() clickEdit = new EventEmitter();
     @Output() clickView = new EventEmitter();
     @Output() clickDelete = new EventEmitter();
@@ -20,22 +21,24 @@ export class DynamicTableComponent implements OnInit, OnChanges {
         CustomHeader: false,
         ActionClumn: false,
         ColumnOrder: [],
+        JsonKeys:[],
         HideColumn: [],
         RowData: []
     };
     ngOnInit() {
         this.getHeaders();
         this.dytData.RowData = this.RowData;
-        console.log(this.dytData.RowData)
+        console.log(this.dytData)
     }
     ngOnChanges(change: SimpleChanges) {
-        console.log(change['RowData'].currentValue)
+        console.log(change)
         change['RowData'] != undefined ? this.dytData.RowData = change['RowData'].currentValue : '';
         change['CustomHeader'] != undefined ? this.dytData.CustomHeader = change['CustomHeader'].currentValue : '';
         change['ColumnOrder'] != undefined ? this.dytData.ColumnOrder = change['ColumnOrder'].currentValue : '';
         change['HideColumn'] != undefined ? this.dytData.HideColumn = change['HideColumn'].currentValue : '';
         change['ActionClumn'] != undefined ? this.dytData.ActionClumn = change['ActionClumn'].currentValue : '';
-        console.log(this.dytData.RowData)
+        change['JsonKeys'] != undefined ? this.dytData.JsonKeys = change['JsonKeys'].currentValue : '';
+        console.log(this.dytData)
     }
     onEditClick(item: any) {
             this.clickEdit.emit(item);
@@ -50,7 +53,7 @@ export class DynamicTableComponent implements OnInit, OnChanges {
         let headers: string[] = [];
         if (this.dytData.CustomHeader) {
             this.tableHeaders = this.dytData.ColumnOrder;
-            console.log(this.dytData)
+          
         } else {
             if (this.dytData.RowData) {
                 this.dytData.RowData.forEach((value) => {

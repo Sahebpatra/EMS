@@ -6,7 +6,7 @@
     </div>
     <div class="mt-3">
         <ng-container *ngIf="RowData && RowData.length>0">
-        <dy-table [RowData]="RowData"></dy-table>
+        <dy-table [RowData]="RowData" [CustomHeader]="true" [ColumnOrder]="ColumnOrder" [JsonKeys]="JsonKey"></dy-table>
     </ng-container>
     </div>
 </div>
