@@ -67,6 +67,18 @@
       "pin": 54634523452,
       "about": "DFGSDFGSDFG",
       "id": 7
+    },
+    {
+      "name": "sdfg",
+      "department": "Engineer",
+      "country": "UK",
+      "state": "Delhi",
+      "city": "",
+      "email": "sdfgsg",
+      "mobile": 4564,
+      "pin": 34654,
+      "about": "sdfgsdfg",
+      "id": 8
     }
   ],
   "Users": [
@@ -74,12 +86,14 @@
       "id": 1,
       "username": "saheb@yopmail.com",
       "password": "1234",
+      "conpassword": "1234",
       "role": "admin",
       "isActive": 1
     },
     {
       "username": "saheb",
       "password": "1234",
+      "conpassword": "1234",
       "role": "admin",
       "id": 2,
       "isActive": 1
@@ -87,14 +101,14 @@
     {
       "username": "Saheb@123",
       "password": "123",
-      "confirmpassword": "123",
+      "conpassword": "123",
       "role": "admin",
       "id": 3
     },
     {
       "username": "riddha",
       "password": "1234",
-      "confirmpassword": "1234",
+      "conpassword": "1234",
       "role": "admin",
       "id": 4
     },

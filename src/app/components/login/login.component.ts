@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private ser: Services, private router: Router) { }
 
   ngOnInit(): void {
-    
+
     this.formOptions = {
       "formname": "Login",
       "formFields":
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
             "rules": {
               "required": true,
             },
-            "class":"col-sm-12"
+            "class": "col-sm-12"
           },
           {
             "name": "password",
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
             "rules": {
               "required": true,
             },
-            "class":"col-sm-12"
+            "class": "col-sm-12"
           }
         ]
     }

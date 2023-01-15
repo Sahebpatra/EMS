@@ -23,6 +23,7 @@ import { MyAccountComponent } from './components/my-account/my-account.component
 import { DnamicFormComponent } from './components/shared/dnamic-form/dnamic-form.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { DynamicTableComponent } from './components/shared/dynamic-table/dynamic-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     UsersComponent,
     MyAccountComponent,
     DnamicFormComponent,
-    
+    DynamicTableComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -48,13 +51,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule ,
+    MatNativeDateModule,
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
     AdminModule
   ],
   providers: [],
-  bootstrap: [AppComponent,MatNativeDateModule]
+  bootstrap: [AppComponent, MatNativeDateModule]
 })
 export class AppModule { }

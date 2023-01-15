@@ -7,7 +7,7 @@ import { Services } from 'src/app/components/Auth/services.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  data:any;
+  RowData:any;
   Active:any;
   constructor(private service:Services) { }
 
@@ -16,9 +16,8 @@ this.service.getUsers().subscribe(
   {
     next:(res)=>{
       console.log(res);
-      debugger
       this.Active=res.isActive==1? 'Yes':'No';
-      this.data=res;
+    this.RowData=res;
 
     }
   }
